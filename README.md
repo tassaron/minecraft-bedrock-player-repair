@@ -16,4 +16,6 @@ Thanks to cjwatson for [this script](https://github.com/cjwatson/minecraft-conve
 ## Backstory
 Once upon a time, I fell from a high place and died in the game of Minecraft. A totem of undying saved me, but a few seconds later my screen went grey. All I could see was the HUD and a general skybox/darkness colour. Soon after, my game crashed. I thought it could be because I was using the unofficial launcher for Linux, so I tried logging in from other devices. Everything crashed shortly after logging into the world. I tried teleporting my player using the server console; the player's position changed and it was clear that they did exist in the world. But still the game would crash if I actually tried to play.
 
-I have no idea why this apparent "player corruption" was so severe that it affected only clients while the server was apparently none the wiser... but eventually I came to the conclusion that my only option was to write this Python script. To my surprise, it actually worked! My Ender Chest is saved thanks to Python :)
+Eventually I came to the conclusion that my only option was to write this Python script. To my surprise, it actually worked! My Ender Chest is saved thanks to Python :)
+
+Later I found [this bug report](https://github.com/ChristopherHX/mcpelauncher-manifest/issues/278) on the launcher I was using, which seems to describe what happened. The player entity's rotation value becomes `NaN` and allegedly can be fixed by switching to third person. I haven't confirmed this yet.
